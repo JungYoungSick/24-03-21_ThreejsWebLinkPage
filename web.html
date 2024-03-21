@@ -39,19 +39,10 @@
     <script src="/maps/panolens.min.js"></script>
 
     <script>
-      const panorama = new PANOLENS.ImagePanorama("filed.jpg");
+      const panorama = new PANOLENS.ImagePanorama("/image/line3.png");
       const viewer = new PANOLENS.Viewer({ output: "console" });
-
-      const infospot = new PANOLENS.Infospot();
-      // Infospot 작업 시 대문자 잘 입력하기.
-      infospot.position.set(2304, 1867, -5000);
-
-      infospot.addEventListener("click", function () {
-        window.location.href = "https://naver.com";
-      });
-      panorama.add(infospot);
-
       viewer.add(panorama);
     </script>
+    <script src="./infospot.js"></script>
   </body>
 </html>
